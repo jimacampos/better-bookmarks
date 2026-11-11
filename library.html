@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library · Better Bookmarks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="library">
+    <header class="library-header">
+      <div><p class="eyebrow">Better Bookmarks</p><h1>Your library</h1><p>Your links, in this browser profile.</p></div>
+    </header>
+    <div class="layout">
+      <aside class="card">
+        <h2>Collections</h2>
+        <nav id="collections" aria-label="Collections"></nav>
+        <form id="create-collection">
+          <label for="collection-name">New collection</label>
+          <input id="collection-name" placeholder="Collection name" required>
+          <label for="collection-parent">Parent</label>
+          <select id="collection-parent"><option value="">Top level</option></select>
+          <button type="submit" class="secondary wide">Create collection</button>
+        </form>
+        <p class="note">No backup or sync is available. Removing the extension or browser profile may delete this library.</p>
+      </aside>
+      <section>
+        <div class="toolbar">
+          <div><h2 id="view-title">All links</h2><p id="count" class="muted"></p><button id="delete-collection" class="danger" type="button" hidden>Delete collection</button></div>
+          <label class="search">Search links<input id="search" type="search" placeholder="Search title, URL, description or tags"></label>
+        </div>
+        <p id="status" role="status" aria-live="polite"></p>
+        <form id="move-collection" hidden>
+          <label for="new-parent">Collection parent</label>
+          <select id="new-parent"></select>
+          <button type="submit" class="secondary">Change parent</button>
+        </form>
+        <div id="entries"></div>
+      </section>
+    </div>
+  </main>
+  <dialog id="details-dialog" aria-labelledby="details-heading">
+    <form id="details-form">
+      <h2 id="details-heading">Edit link details</h2>
+      <p id="details-title" class="muted"></p>
+      <label for="description">Description (optional)</label>
+      <textarea id="description" rows="5"></textarea>
+      <label for="tags">Tags (optional)</label>
+      <input id="tags" aria-describedby="tags-help">
+      <p id="tags-help" class="note">Separate tags with commas. Duplicate tags are combined ignoring capitalization.</p>
+      <p id="details-status" role="status" aria-live="polite"></p>
+      <div class="actions">
+        <button id="save-details" type="submit">Save details</button>
+        <button id="cancel-details" type="button" class="secondary">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+  <script type="module" src="library.js"></script>
+</body>
+</html>

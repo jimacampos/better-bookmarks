@@ -1,0 +1,10 @@
+{
+  "name": "better-bookmarks",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check storage.js && node --check popup.js && node --check library.js"
+  }
+}

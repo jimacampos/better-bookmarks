@@ -1,0 +1,26 @@
+# macOS and Windows metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Local dependencies and generated output
+node_modules/
+coverage/
+dist/
+build/
+*.log
+
+# Local environment files (keep shareable examples)
+.env
+.env.*
+!.env.example
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# Packed extensions and private signing keys
+*.crx
+*.pem

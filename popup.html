@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Better Bookmarks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="popup">
+  <main>
+    <header><h1>Better Bookmarks</h1><p>Save this page for later.</p></header>
+    <section class="card">
+      <p class="eyebrow">Current page</p>
+      <p id="page-title" class="page-title">Loading…</p>
+      <p id="page-url" class="url"></p>
+      <form id="save-form">
+        <label for="collection">Save to</label>
+        <select id="collection" disabled></select>
+        <button id="save" type="submit" disabled>Save link</button>
+      </form>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <button id="open-library" class="secondary wide" type="button">Open library</button>
+    <p class="note">Stored only in this browser profile. No backup or sync is available.</p>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

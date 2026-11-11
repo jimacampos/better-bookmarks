@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Better Bookmarks",
+  "version": "0.1.0",
+  "description": "Save links to a simple, private library in this browser profile.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_title": "Save to Better Bookmarks",
+    "default_popup": "popup.html"
+  }
+}
